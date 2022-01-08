@@ -79,6 +79,11 @@ body{
     border: none;
 }
 
+button{
+    border: none;
+    background: none;
+}
+
 
 
 
