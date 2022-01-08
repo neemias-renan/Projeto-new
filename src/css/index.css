@@ -21,7 +21,7 @@ body{
 #button_menu-close{
     display: none;
     z-index: 1;
-    margin-left: 136px;
+    /* margin-left: 136px; */
 }
 
 .nav{
@@ -125,11 +125,19 @@ button{
         display: none;
         width: 110px;
         position: absolute;
+        z-index: 1;
     }
     .buttons_menu{
         display: flex;
         height: 64px;
         z-index: 1;
+    }
+    #button_menu-close{
+        display: none;
+        z-index: 1;
+        /* margin-left: 136px; */
+        position: absolute;
+        margin-top: -8em;
     }
     .container{
         width: 100%;
