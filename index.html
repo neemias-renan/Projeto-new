@@ -17,36 +17,88 @@
         <div class="nav" id="nav">
             <ul class="ul-nav">
                 <li class="li-nav">
-                    <button id="button_netflix"><img class="icon_mini" src="src/imgs/icons/mini/netflix.png"></button>
+                    <button id="button_netflix" onclick="openstreaming('container-netflix')"><img class="icon_mini" src="src/imgs/icons/mini/netflix.png"></button>
                 </li>
 
                 <li class="li-nav">
-                    <button id="button_primevideo"><img  class="icon_mini" src="src/imgs/icons/mini/primevideo.jpg"></button>
+                    <button id="button_primevideo" onclick="openstreaming('container-primevideo')"><img  class="icon_mini" src="src/imgs/icons/mini/primevideo.jpg"></button>
                 </li>
 
                 <li class="li-nav">
-                    <button id="button_disneyplus"><img class="icon_mini" src="src/imgs/icons/mini/disneyplus.jpg"></button>
+                    <button id="button_disneyplus" onclick="openstreaming('container-disneyplus')"><img class="icon_mini" src="src/imgs/icons/mini/disneyplus.jpg"></button>
                 </li>
 
                 <li class="li-nav">
-                    <button id="button_hbomax"><img class="icon_mini" src="src/imgs/icons/mini/HBOmax.png"></button>
+                    <button id="button_hbomax" onclick="openstreaming('container-hbomax')"><img class="icon_mini" src="src/imgs/icons/mini/HBOmax.png"></button>
                 </li>
 
                 <li class="li-nav">
-                    <button id="button_globoplay"><img class="icon_mini" src="src/imgs/icons/mini/globoplay.png"></button>
+                    <button id="button_globoplay" onclick="openstreaming('container-globoplay')"><img class="icon_mini" src="src/imgs/icons/mini/globoplay.png"></button>
                 </li>
 
                 <li class="li-nav">
-                    <button id="button_paramount"><img class="icon_mini" src="src/imgs/icons/mini/paramountplus.png"></button>
+                    <button id="button_paramount" onclick="openstreaming('container-paramount')"><img class="icon_mini" src="src/imgs/icons/mini/paramountplus.png"></button>
                 </li>
 
                 <li class="li-nav">
-                    <button id="button_telecine"><img class="icon_mini" src="src/imgs/icons/mini/telecineplay.jpg"></button>
+                    <button id="button_telecine" onclick="openstreaming('container-telecineplay')"><img class="icon_mini" src="src/imgs/icons/mini/telecineplay.jpg"></button>
                 </li>
             </ul>
 
         </div>
-        <div class="container"></div>
+        <div class="container">
+
+            <div class="display container-streaming" id="container-netflix">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/netflix.png">
+                </div>
+                <div class="container-content"></div>
+            </div>
+
+            <div class="displaynone" id="container-primevideo">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/primevideo.jpg">
+                </div>
+                <div class="container-content"></div>
+            </div>
+
+            <div class="displaynone" id="container-disneyplus">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/disneyplus.png">
+                </div>
+                <div class="container-content"></div>
+            </div>
+
+            <div class="displaynone" id="container-hbomax">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/HBOmax.png">
+                </div>
+                <div class="container-content"></div>
+            </div>
+
+            <div class="displaynone" id="container-globoplay">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/Globoplay.png">
+                </div>
+                <div class="container-content"></div>
+            </div>
+
+            <div class="displaynone" id="container-paramount">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/paramountplus.png">
+                </div>
+                <div class="container-content"></div>
+            </div>
+
+            <div class="displaynone" id="container-telecineplay">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/Telecineplay.png">
+                </div>
+                <div class="container-content"></div>
+            </div>
+
+
+        </div>
     </div>
 </body>
 </html>
