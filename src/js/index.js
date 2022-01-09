@@ -21,3 +21,30 @@ function openstreaming(streaming){
 
     document.getElementById(streaming).style.display = 'block';
 }
+
+
+function creategroup_divs(){
+    div = document.createElement('div')
+    div.setAttribute('class','group-div')
+
+}
+
+
+
+function getDataFilms(code){
+    key = "6de86843f2a0b13263c6fd3151644458"
+    url = "https://api.themoviedb.org/3/movie/"+code+"?api_key="+key+"&language=pt-BR"
+    let request = new XMLHttpRequest()
+    request.open("GET",url,false)
+    request.send()
+    return request.responseText
+}
+
+function film(id){
+    data = getDataFilms(id)
+    info = JSON.parse(data)
+    console.log(info.poster_path)
+}
+
+film(81002370)
+
