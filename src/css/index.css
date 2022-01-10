@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body{
     margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 .body{
@@ -111,6 +114,7 @@ button{
     height: 5em;
     display: flex;
     align-items: flex-end;
+    font-weight: 600;
 }
 .original_content-div{
     height: auto;

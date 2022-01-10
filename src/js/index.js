@@ -43,8 +43,27 @@ function getDataFilms(code){
 function film(id){
     data = getDataFilms(id)
     info = JSON.parse(data)
-    console.log(info.poster_path)
+    return info
 }
 
-film(81002370)
+function openfilm(id){
+    filme = film(id)
+    return filme
+}
+
+function loadImg(id){
+    dadosdofilme = film(id);
+    atribute_id = "img"+id;
+    poster = "https://www.themoviedb.org/t/p/original"+(dadosdofilme.poster_path);
+
+    div = document.getElementById('teste')
+    console.log(div)
+    image = document.createElement('img');
+    image.setAttribute('class','img_poster-g');
+    image.setAttribute('id',atribute_id);
+    image.setAttribute('src',poster);
+    console.log(image);
+    div.append(image);
+}
+
 
