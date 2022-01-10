@@ -56,7 +56,7 @@ function loadImg(id){
     atribute_id = "img"+id;
     poster = "https://www.themoviedb.org/t/p/original"+(dadosdofilme.poster_path);
 
-    div = document.getElementById('teste')
+     div = document.getElementById(id)
     console.log(div)
     image = document.createElement('img');
     image.setAttribute('class','img_poster-g');
@@ -64,6 +64,7 @@ function loadImg(id){
     image.setAttribute('src',poster);
     console.log(image);
     div.append(image);
+    // div.append(image)
+
+    
 }
-
-
