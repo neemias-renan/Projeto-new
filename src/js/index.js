@@ -46,8 +46,8 @@ function openfilm(id){
 }
 
 
-function CreateDivFilms(id1,id2,id3,id4){
-    content_divs_space = document.getElementById('content-divs-space');
+function CreateDivFilms(road,id1,id2,id3,id4){
+    content_divs_space = document.getElementById(road);
 
     // Criei o group-div
     group_divs = document.createElement('div');
@@ -163,7 +163,7 @@ function GetFilmsNetflix(){
         id2 = idFilmes[cont+1]
         id3 = idFilmes[cont+2]
         id4 = idFilmes[cont+3]
-        CreateDivFilms(id1,id2,id3,id4);
+        CreateDivFilms('content-divs-space1',id1,id2,id3,id4);
         cont++;
         cont++;
         cont++;
@@ -171,3 +171,63 @@ function GetFilmsNetflix(){
     }
 }
 
+function GetFilmsPrimeVideo(){
+    var idFilmes = ['479455','530915','588228','512200','466272','324786','448119','429617'];
+    tamanho = idFilmes.length;
+    cont = 0;
+    console.log('ok')
+    while(cont < tamanho){
+        id1 = idFilmes[cont];
+        id2 = idFilmes[cont+1]
+        id3 = idFilmes[cont+2]
+        id4 = idFilmes[cont+3]
+        CreateDivFilms('content-divs-space2',id1,id2,id3,id4);
+        cont++;
+        cont++;
+        cont++;
+        cont++;
+    }
+}
+
+function GetFilmsDisneyplus(){
+    var idFilmes = ['335797','568124','566525','19995','497698','451048','508943','527774'];
+    tamanho = idFilmes.length;
+    cont = 0;
+    console.log('ok')
+    while(cont < tamanho){
+        id1 = idFilmes[cont];
+        id2 = idFilmes[cont+1]
+        id3 = idFilmes[cont+2]
+        id4 = idFilmes[cont+3]
+        CreateDivFilms('content-divs-space3',id1,id2,id3,id4);
+        cont++;
+        cont++;
+        cont++;
+        cont++;
+    }
+}
+
+function GetFilmsHbomax(){
+    var idFilmes = ['603','157336','333339','38','76341','791373','464052','399566'];
+    tamanho = idFilmes.length;
+    cont = 0;
+    console.log('ok')
+    while(cont < tamanho){
+        id1 = idFilmes[cont];
+        id2 = idFilmes[cont+1]
+        id3 = idFilmes[cont+2]
+        id4 = idFilmes[cont+3]
+        CreateDivFilms('content-divs-space4',id1,id2,id3,id4);
+        cont++;
+        cont++;
+        cont++;
+        cont++;
+    }
+}
+
+function AtualizarFilmes(){
+    GetFilmsNetflix()
+    GetFilmsPrimeVideo()
+    GetFilmsDisneyplus()
+    GetFilmsHbomax()
+}
