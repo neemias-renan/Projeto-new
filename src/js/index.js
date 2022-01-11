@@ -20,6 +20,19 @@ function openstreaming(streaming){
     document.getElementById('container-telecineplay').style.display = 'none';
 
     document.getElementById(streaming).style.display = 'block';
+
+    if(streaming == 'container-netflix'){
+        GetFilmsNetflix();
+    }
+    if(streaming == 'container-primevideo'){
+        GetFilmsPrimeVideo();
+    }
+    if(streaming == 'container-disneyplus'){
+        GetFilmsDisneyplus();
+    }
+    if(streaming == 'container-hbomax'){
+        GetFilmsHbomax();
+    }
 }
 
 
@@ -223,11 +236,4 @@ function GetFilmsHbomax(){
         cont++;
         cont++;
     }
-}
-
-function AtualizarFilmes(){
-    GetFilmsNetflix()
-    GetFilmsPrimeVideo()
-    GetFilmsDisneyplus()
-    GetFilmsHbomax()
 }
