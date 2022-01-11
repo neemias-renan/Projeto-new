@@ -18,22 +18,10 @@ function openstreaming(streaming){
     document.getElementById('container-globoplay').style.display = 'none';
     document.getElementById('container-paramount').style.display = 'none';
     document.getElementById('container-telecineplay').style.display = 'none';
-
+    
     document.getElementById(streaming).style.display = 'block';
-
-    if(streaming == 'container-netflix'){
-        GetFilmsNetflix();
-    }
-    if(streaming == 'container-primevideo'){
-        GetFilmsPrimeVideo();
-    }
-    if(streaming == 'container-disneyplus'){
-        GetFilmsDisneyplus();
-    }
-    if(streaming == 'container-hbomax'){
-        GetFilmsHbomax();
-    }
 }
+
 
 
 
@@ -73,6 +61,8 @@ function buttonback(){
     document.getElementById('button_menu-open').style.display = 'block';
     document.getElementById('button_back').style.display = 'none';
 
+    var frame = document.getElementById('videofilm');
+    frame.innerHTML = ''
 }
 
 
@@ -84,7 +74,7 @@ function openfilm(id){
     document.getElementById('titlefilm').innerHTML = filme.title
     document.getElementById('overviewfilm').innerHTML = filme.overview 
     var frame = document.getElementById('videofilm');
-    frame.innerHTML += '<iframe src="https://embed.warezcdn.com/filme/'+idIMDB+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>'
+    frame.innerHTML = '<iframe src="https://embed.warezcdn.com/filme/'+idIMDB+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>'
     alterarbackground(link)
 }
 
@@ -262,4 +252,11 @@ function GetFilmsHbomax(){
         cont++;
         cont++;
     }
+}
+
+function AtualizarFilmes(){
+    GetFilmsNetflix();
+    GetFilmsPrimeVideo();
+    GetFilmsDisneyplus();
+    GetFilmsHbomax();
 }
