@@ -53,9 +53,39 @@ function film(id){
     return info
 }
 
+function alterarbackground(id){
+    document.getElementById('div-main').style.display = 'block'
+    document.getElementById('nav').style.display = 'none';
+    backgrou = 'url(https://www.themoviedb.org/t/p/original'+id+')';
+    document.getElementById('div-main').style.background = backgrou; 
+    document.getElementById('div-main').style.backgroundSize = 'cover';
+    document.getElementById('div-main').style.backgroundPosition = 'center';
+    document.getElementById('div-main').style.position = 'fixed';
+    document.getElementById('container').style.overflow = 'hidden';
+    document.getElementById('button_menu-open').style.display = 'none';
+    document.getElementById('buttons_menu').style.display = 'flex';
+    document.getElementById('button_back').style.display = 'flex';
+}
+
+function buttonback(){
+    document.getElementById('div-main').style.display = 'none';
+    document.getElementById('container').style.overflow = 'auto';
+    document.getElementById('button_menu-open').style.display = 'block';
+    document.getElementById('button_back').style.display = 'none';
+
+}
+
+
 function openfilm(id){
-    filme = film(id)
-    return filme
+    filme = film(id);
+    console.log(filme)
+    link = filme.backdrop_path
+    idIMDB = filme.imdb_id
+    document.getElementById('titlefilm').innerHTML = filme.title
+    document.getElementById('overviewfilm').innerHTML = filme.overview 
+    var frame = document.getElementById('videofilm');
+    frame.innerHTML += '<iframe src="https://embed.warezcdn.com/filme/'+idIMDB+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>'
+    alterarbackground(link)
 }
 
 
@@ -170,12 +200,11 @@ function GetFilmsNetflix(){
     var idFilmes = ['646380','537116','335983','17654','554230','447332','739413',"315635"];
     tamanho = idFilmes.length;
     cont = 0;
-    console.log('ok')
     while(cont < tamanho){
         id1 = idFilmes[cont];
-        id2 = idFilmes[cont+1]
-        id3 = idFilmes[cont+2]
-        id4 = idFilmes[cont+3]
+        id2 = idFilmes[cont+1];
+        id3 = idFilmes[cont+2];
+        id4 = idFilmes[cont+3];
         CreateDivFilms('content-divs-space1',id1,id2,id3,id4);
         cont++;
         cont++;
@@ -188,12 +217,11 @@ function GetFilmsPrimeVideo(){
     var idFilmes = ['479455','530915','588228','512200','466272','324786','448119','429617'];
     tamanho = idFilmes.length;
     cont = 0;
-    console.log('ok')
     while(cont < tamanho){
         id1 = idFilmes[cont];
-        id2 = idFilmes[cont+1]
-        id3 = idFilmes[cont+2]
-        id4 = idFilmes[cont+3]
+        id2 = idFilmes[cont+1];
+        id3 = idFilmes[cont+2];
+        id4 = idFilmes[cont+3];
         CreateDivFilms('content-divs-space2',id1,id2,id3,id4);
         cont++;
         cont++;
@@ -206,12 +234,11 @@ function GetFilmsDisneyplus(){
     var idFilmes = ['335797','568124','566525','19995','497698','451048','508943','527774'];
     tamanho = idFilmes.length;
     cont = 0;
-    console.log('ok')
     while(cont < tamanho){
         id1 = idFilmes[cont];
-        id2 = idFilmes[cont+1]
-        id3 = idFilmes[cont+2]
-        id4 = idFilmes[cont+3]
+        id2 = idFilmes[cont+1];
+        id3 = idFilmes[cont+2];
+        id4 = idFilmes[cont+3];
         CreateDivFilms('content-divs-space3',id1,id2,id3,id4);
         cont++;
         cont++;
@@ -224,12 +251,11 @@ function GetFilmsHbomax(){
     var idFilmes = ['603','157336','333339','38','76341','791373','464052','399566'];
     tamanho = idFilmes.length;
     cont = 0;
-    console.log('ok')
     while(cont < tamanho){
         id1 = idFilmes[cont];
-        id2 = idFilmes[cont+1]
-        id3 = idFilmes[cont+2]
-        id4 = idFilmes[cont+3]
+        id2 = idFilmes[cont+1];
+        id3 = idFilmes[cont+2];
+        id4 = idFilmes[cont+3];
         CreateDivFilms('content-divs-space4',id1,id2,id3,id4);
         cont++;
         cont++;

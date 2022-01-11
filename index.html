@@ -10,8 +10,9 @@
 </head>
 <body onload='GetFilmsNetflix()'>
     <div class="body">
-        <div class="buttons_menu">
+        <div class="buttons_menu" id="buttons_menu">
             <button class="button_menu" type="button" id="button_menu-open" onclick="openmenu()"><img class="icon_button" src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png"/></button>
+            <button class="button_menu" type="button" id="button_back" onclick="buttonback()"><img class="icon_button" src="https://img.icons8.com/ios-filled/50/ffff/back.png"/></button>
         </div>
 
         <div class="nav" id="nav">
@@ -51,7 +52,7 @@
 
         </div>
 
-        <div class="container">
+        <div class="container" id='container'>
             <div class="display container-streaming" id="container-netflix">
                 <div class="container-header">
                     <img class="image-logo" src="src/imgs/icons/full/netflix.png">
@@ -116,8 +117,18 @@
                 </div>
                 <div class="container-content"></div>
             </div>
+        </div>
 
-
+        <div id="div-main">
+            <div class="div-main-content">
+                <div class="div-main-content-video">
+                    <div id="videofilm"></div>
+                </div>
+                <div>
+                    <h1 id="titlefilm">Texto</h1>
+                    <p id="overviewfilm"></p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
