@@ -7,8 +7,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='src/css/index.css'>
     <script src='src/js/index.js'></script>
+    <script src='src/js/buttons.js'></script>
+    <script src='src/js/pages.js'></script>
+    <script src='src/js/keys.js'></script>
 </head>
-<body onload='AtualizarFilmes()'>
+<body onload='Main()'>
     <div class="body">
         <div class="buttons_menu" id="buttons_menu">
             <button class="button_menu" type="button" id="button_menu-open" onclick="openmenu()"><img class="icon_button" src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png"/></button>
@@ -19,6 +22,10 @@
             <ul class="ul-nav">
                 <li class="li-nav">
                     <button class="button_menu" type="button" id="button_menu-close" onclick="closemenu()"><img class="icon_button" src="https://img.icons8.com/ios-filled/50/000000/back.png"/></button>
+                </li>
+
+                <li class="li-nav">
+                    <button id="button_inicio" onclick="openstreaming('container-inicio')"><img class="icon_mini" src="src/imgs/icons/mini/home.svg"></button>
                 </li>
 
                 <li class="li-nav">
@@ -53,7 +60,18 @@
         </div>
 
         <div class="container" id='container'>
-            <div class="display container-streaming" id="container-netflix">
+            <div class="display container-streaming" id="container-inicio">
+                <div class="container-header">
+                    <img class="image-logo" src="src/imgs/icons/full/">
+                </div>
+                <div class="container-content" id="content-divs-space0">
+                    <div class="title_content-div">
+                        <p>Inicio</p>
+                    </div>         
+                </div>
+            </div>
+
+            <div class="displaynone" id="container-netflix">
                 <div class="container-header">
                     <img class="image-logo" src="src/imgs/icons/full/netflix.png">
                 </div>
@@ -122,7 +140,11 @@
         <div id="div-main">
             <div class="div-main-content">
                 <div class="div-main-content-video">
-                    <div id="videofilm"></div>
+                    <div>
+                        <video  id="videofilm">
+
+                        </video>
+                    </div>
                 </div>
                 <div>
                     <h1 id="titlefilm">Texto</h1>

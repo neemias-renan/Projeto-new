@@ -203,6 +203,7 @@ iframe{
         width: 110px;
         position: fixed;
         z-index: 1;
+        justify-content: flex-end;
     }
     .buttons_menu{
         display: flex;
